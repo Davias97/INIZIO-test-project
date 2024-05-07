@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Parser</title>
+</head>
+<body>
+<form action="/parse" method="post">
+    <input type="text" name="keyword" required>
+    <button type="submit">Search</button>
+</form>
+<table>
+    <thead>
+        <tr>
+            <th>First 10 searches</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="title : ${titles}">
+            <td th:text="${title}"></td>
+        </tr>
+    </tbody>
+</table>
+<a href="/download">Download CSV</a>
+</body>
+</html>
